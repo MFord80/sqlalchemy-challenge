@@ -1,14 +1,11 @@
 # Python application
 
 # Dependencies
-from codecs import latin_1_decode
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 from flask import Flask, jsonify
-import numpy as np
-import pandas as pd
 import datetime as dt
 
 
@@ -58,17 +55,13 @@ def precipitation():
 @app.route("/api/v1.0/stations")
 def stations():
     session = Session(engine)
-    results = session.query(Station.station, Station.name,\
-        Station.latitude, Station.longitude, Station.elevation).all()
+    results = session.query(Station.station, Station.name).all()
     session.close()
     station_data = []
-    for station, name, latitude, longitude, elevation in results:
+    for station, name in results:
         station_dict = {}
         station_dict['station'] = station
         station_dict['name'] = name
-        station_dict['latitude'] = latitude
-        station_dict['longitude'] = longitude
-        station_dict['elevation'] = elevation
         station_data.append(station_dict)
 
     return jsonify(station_data)
