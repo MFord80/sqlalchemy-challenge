@@ -9,9 +9,9 @@ This repository contains:
 
 The following routes are available in the API:  
 /api/v1.0/precipitation  
-/api/v1.0/stations. 
-/api/v1.0/tobs. 
-/api/v1.0/yyyy-mm-dd [start]. 
+/api/v1.0/stations  
+/api/v1.0/tobs  
+/api/v1.0/yyyy-mm-dd [start]  
 /api/v1.0/yyyy-mm-dd/yyyy-mm-dd [start/end]  
 
 The routes provide the following data:
