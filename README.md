@@ -1,9 +1,9 @@
 # sqlalchemy-challenge
 
-This repository contains:
-    * Jupiter notebook of climate analysis
-    * A resource folder containing data as both CSVs and in SQLite format
-    * A python application that create an API containing jsonified representation of some aspects of the analysed data
+This repository contains:   
+    * Jupiter notebook of climate analysis.  
+    * A resource folder containing data as both CSVs and in SQLite format.  
+    * A python application that create an API containing jsonified representation of some aspects of the analysed data.  
 
 ### API routes
 
